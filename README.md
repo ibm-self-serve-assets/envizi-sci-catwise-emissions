@@ -7,7 +7,6 @@ This guide provides a clear, step-by-step approach for reporting and summarizing
 
 ## 1. Why Separate Emissions by Scope 3 Category?
 
-
 ### Why Do Organizations Need to Separate Emissions Reporting by Scope 3 Category?
 
 SCI offers a robust Scope 3 Summary dashboard that automatically aggregates emissions on a monthly basis at the location level for each GHG (Greenhouse Gas) calculation method, including:
@@ -48,72 +47,210 @@ This consolidated approach gives organizations a clear overview of emissions by 
 However, separating emissions by Scope 3 category—such as Cat 1 (Purchased Goods & Services) and Cat 2 (Capital Goods)—is crucial for meeting regulations, increasing transparency, and supporting sustainability goals. Category-level reporting enables better decision-making, accountability, and targeted action.
 
 
-**Achieving Granular, Category-Level Reporting with SCI:**
+## Achieving Category-Level Reporting in SCI
 
-While SCI's default summary provides a strong foundation, organizations can unlock even deeper insights by leveraging SCI's custom and advanced configurations. These features enable:
+SCI enables organizations to generate detailed emissions reports by category, such as Purchased Goods & Services (Category 1) and Capital Goods (Category 2), for enhanced transparency and compliance.
 
-- More granular, category-level reporting (e.g., by Scope 3 Category 1 and 2)
-- Custom grouping, filtering, and visualization by user-defined categories
+### Example: IN Bank’s Category Reports
 
-For instance, IN Bank required their Scope 3 emissions to be reported separately for each category. The following examples show how the data is visualized for each category:
+IN Bank required their Scope 3 emissions to be reported separately for each category. The following examples illustrate the resulting reports:
 
-**Scope 3 Category 1: Purchased Goods & Services**
+**Category 1: Purchased Goods & Services**
 <div align="center">
   <img src="Images/Scope3-pg&s-summary.png">
 </div>
 
-**Scope 3 Category 2: Capital Goods**
+**Category 2: Capital Goods**
 <div align="center">
   <img src="Images/Scope3-cg-summary.png">
 </div>
 
+### Approaches to Category-Level Reporting
 
-Lets look at the how this can be acheived in SCI in the blow section. 
+SCI supports two primary approaches for category-level reporting:
 
-## 2. Summarizing Emissions for at Scope 3 Cat1 & Cat 2 seperately.
+1. By purchasing organization
+2. By product category (the approach used by IN Bank)
 
-For example our example INBank organization wants to create the seperate summary reports as shwon in the baove section for the two Scope 3 categories 
+For further details, refer to the [Envizi SCI documentation](https://www.ibm.com/docs/en/envizi-supply-chain?topic=configuration-configuring-category-1-2).
 
-- **Category 1:** Purchased Goods & Services (PG&S)
-- **Category 2:** Capital Goods (CG)
+### Step-by-Step: Setting Up Category-Based Reports
 
+#### Step 1: Prepare Product Data
+Ensure your product data includes a field for category (e.g., PG&S or CG), known as the Category L1 ID.
 
-There are two main approaches in SCI for capturing and reporting these categories separately:
-
-1. **Purchasing organization-based approach**
-2. **Product category-based approach**
-
-For more details on which approach to chose, please refer  [Envizi SCI documentation](https://www.ibm.com/docs/en/envizi-supply-chain?topic=configuration-configuring-category-1-2).
-
-
-
-In this guide,  our example organization INBank preferred  to use the `Product category-based approach` as they  wants to classify their purchases to be categorized as PG&S versus CG.  
-
-This can be acehived by defining a Category L1 ID to be used to designate each product ID as PG&S or CG in the Product-mapping template, then reference this Product category for each product in the Product template.
-
-### 2.1. Model the product and product mapping template to align with the appraoch
-
-Make sure the The steps has to start from modelling the data from the begining. Now, INBank has modeled the product data by defining Category L1 ID as crieteria with the possible values PG&S and CG
-
-Master Products data: 
-
+**Master Products Example:**
 <div align="center">
   <img src="Images/SCI-master-product-Catgwise.png">
 </div>
- 
-Master Products Mapping data: 
 
+**Product Mapping Example:**
 <div align="center">
   <img src="Images/SCI-master-product-mapping-Catgwise.png">
 </div>
 
-### 2. Ingest master and transactional data 
+#### Step 2: Load Data
+Upload both master and transactional data into SCI, ensuring the category field is populated for each product.
 
-Proceed with the other stepts to ingest master data and transactional data into the platform and verify the emissions are calculated
+#### Step 3: Review the Default Scope 3 Summary
+Navigate to `Reporting > Scope 3 Summary` to view the standard monthly report.
+<div align="center">
+  <img src="Images/SCI-Scope3-Summary-Jan2024.png">
+</div>
 
+#### Step 4: Create a PG&S-Summary  Report 
 
+To generate a report specifically for Category 1 (PG&S):
 
-### 2. Ingest master and transactional data 
+Step 4.1. **Copy the Summary Page**
+   - Go to `Builder > Page builder`
+   - Click `Manage pages` (top right)
+  <div align="center">
+  <img src="Images/SCI-PageLib-ManagePages.png">
+</div>
+
+   - Select the `Scope 3 Summary` tab
+ <div align="center">
+  <img src="Images/SCI-PageLib-ManagePages-Summary.png">
+</div>
+
+   - Click the pencil icon next to `Summary` to preview
  
+   - Click `Copy` (top right) to create a new page
+   <div align="center">
+  <img src="Images/SCI-PageLib-ManagePages-Summary-copy.png">
+</div>
+
+   - Name the new page `PG&S-Summary` (add a description if desired)
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-1.png">
+</div>
+
+   - Click on `Create`
 
 
+Step 4.2. **Configure the PG&S-Summary Page**
+   
+   - Click `Configure` on the new `PG&S-Summary` page
+  <div align="center">
+  <img src="Images/SCI-Scope3-pgs-config-context.png">
+</div>
+ 
+   - In the popup, review the context variables (these control the data displayed)
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-context-vars.png">
+</div>
+   
+   - Set `categoryLevelOneFilter` to `PG&S` (ensure this matches your product data exactly)
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-context-vars-catL1.png">
+</div>
+   
+   - (Optional) Adjust `numberOfMonths` to specify the number of months for reporting data (e.g., 60)
+   - (Optional) Set `accountNumberPrefix` (e.g., `scis-pgs-`) to help organize accounts
+   - Leave other settings as default unless customization is required. You can validate the account style link values for the PG&S by looking at the same from Envizi account styles extract report following instructions [here](extractAccountStyleLinks.md)
+   - Review your settings:
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-context-2.png">
+</div>
+
+   - Click `Save`
+  
+Step 4.3. **View the PG&S Summary page**
+
+On the PG&S Summary page, the context variables look like below 
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-context-3.png">
+</div> 
+
+Step 4.5. **Access the Custom Report**
+   - Go to `Reporting > Scope 3 Summary`
+   - Select the `PG&S-Summary` tab
+   - Choose a month to view emissions
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-summary.png">
+</div>
+
+---
+
+
+
+#### Step 5: Create a CG-Summary Report
+
+To generate a report specifically for Category 2 (CG):
+
+Step 5.1. **Copy the Summary Page**
+  - Go to `Builder > Page builder`
+  - Click `Manage pages` (top right)
+  <div align="center">
+  <img src="Images/SCI-PageLib-ManagePages.png">
+</div>
+
+  - Select the `Scope 3 Summary` tab
+ <div align="center">
+  <img src="Images/SCI-PageLib-ManagePages-Summary-1.png">
+</div>
+
+  - Click the pencil icon next to `Summary` to preview
+ 
+  - Click `Copy` (top right) to create a new page
+  <div align="center">
+  <img src="Images/SCI-PageLib-ManagePages-Summary-copy.png">
+</div>
+
+  - Name the new page `CG-Summary` (add a description if desired)
+<div align="center">
+  <img src="Images/SCI-Scope3-cgs-1.png">
+</div>
+
+  - Click on `Create`
+
+
+Step 5.2. **Configure the CG-Summary Page**
+   
+  - Click `Configure` on the new `CG-Summary` page
+  <div align="center">
+  <img src="Images/SCI-Scope3-cgs-3.png">
+</div>
+ 
+  - In the popup, review the context variables (these control the data displayed)
+<div align="center">
+  <img src="Images/SCI-Scope3-pgs-context-vars.png">
+</div>
+   
+  - Set `categoryLevelOneFilter` to `CG` (ensure this matches your product data exactly)
+<div align="center">
+  <img src="Images/SCI-Scope3-cgs-4.png">
+</div>
+   
+  - (Optional) Adjust `numberOfMonths` to specify the number of months for reporting data (e.g., 60)
+  - (Optional) Set `accountNumberPrefix` (e.g., `scis-cg-`) to help organize accounts
+  - (Required) Set `spendFactorAccountStyleLink`  to `38125`
+  - (Required) Set `averageFactorAccountStyleLink`  to `38124`
+  - (Required) Set `supplierSpecificAccountStyleLink` to `38127`
+  - (Required) Set `hybridAccountStyleLink` to `38126`
+ 
+ Note: Get the corresponding Account Style link values following the instructions from here.
+[here](extractAccountStyleLinks.md)
+
+  - Review your settings:
+<div align="center">
+  <img src="Images/SCI-Scope3-cgs-7-final.png">
+</div>
+
+  - Click `Save`
+  
+Step 5.3. **View the CG-Summary page**
+
+On the CG-Summary page, the context variables look like below 
+<div align="center">
+  <img src="Images/SCI-Scope3-cgs-context.png">
+</div> 
+
+Step 5.4. **Access the Custom CG-Summary Report**
+  - Go to `Reporting > Scope 3 Summary`
+  - Select the `CG-Summary` tab
+  - Choose a month to view emissions
+<div align="center">
+  <img src="Images/Scope3-cg-summary.png">
+</div>
