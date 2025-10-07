@@ -23,7 +23,7 @@ For example, in our sample organization INBank, there are three purchasing locat
 - INBank-US-Ops
 
 <div align="center">
-  <img src="Images/SCI-Scope3-Summary-Jan2024.png">
+  <img src="images/SCI-Scope3-Summary-Jan2024.png">
 </div>
 
 
@@ -34,12 +34,12 @@ These monthly emissions will be exported to Envizi for overall Scope 3 reporting
 Below is an example of how the exported data appears in Envizi, organized by purchasing location and GHG method.
 
 <div align="center">
-  <img src="Images/Envizi-APAC-Ops-SpendAcc.png">
+  <img src="images/Envizi-APAC-Ops-SpendAcc.png">
 </div>
 
 <br>
 <div align="center">
-  <img src="Images/Envizi-APAC-Ops-SpendAcc-data.png">
+  <img src="images/Envizi-APAC-Ops-SpendAcc-data.png">
 </div>
 <br>
 This consolidated approach gives organizations a clear overview of emissions by method and location, simplifying Scope 3 performance management.
@@ -57,12 +57,12 @@ IN Bank required their Scope 3 emissions to be reported separately for each cate
 
 **Category 1: Purchased Goods & Services**
 <div align="center">
-  <img src="Images/Scope3-pg&s-summary.png">
+  <img src="images/Scope3-pg&s-summary.png">
 </div>
 
 **Category 2: Capital Goods**
 <div align="center">
-  <img src="Images/Scope3-cg-summary.png">
+  <img src="images/Scope3-cg-summary.png">
 </div>
 
 ### Approaches to Category-Level Reporting
@@ -81,12 +81,12 @@ Ensure your product data includes a field for category (e.g., PG&S or CG), known
 
 **Master Products Example:**
 <div align="center">
-  <img src="Images/SCI-master-product-Catgwise.png">
+  <img src="images/SCI-master-product-Catgwise.png">
 </div>
 
 **Product Mapping Example:**
 <div align="center">
-  <img src="Images/SCI-master-product-mapping-Catgwise.png">
+  <img src="images/SCI-master-product-mapping-Catgwise.png">
 </div>
 
 #### Step 2: Load Data
@@ -95,7 +95,7 @@ Upload both master and transactional data into SCI, ensuring the category field 
 #### Step 3: Review the Default Scope 3 Summary
 Navigate to `Reporting > Scope 3 Summary` to view the standard monthly report.
 <div align="center">
-  <img src="Images/SCI-Scope3-Summary-Jan2024.png">
+  <img src="images/SCI-Scope3-Summary-Jan2024.png">
 </div>
 
 #### Step 4: Create a PG&S-Summary  Report 
@@ -106,24 +106,24 @@ Step 4.1. **Copy the Summary Page**
    - Go to `Builder > Page builder`
    - Click `Manage pages` (top right)
   <div align="center">
-  <img src="Images/SCI-PageLib-ManagePages.png">
+  <img src="images/SCI-PageLib-ManagePages.png">
 </div>
 
    - Select the `Scope 3 Summary` tab
  <div align="center">
-  <img src="Images/SCI-PageLib-ManagePages-Summary.png">
+  <img src="images/SCI-PageLib-ManagePages-Summary.png">
 </div>
 
    - Click the pencil icon next to `Summary` to preview
  
    - Click `Copy` (top right) to create a new page
    <div align="center">
-  <img src="Images/SCI-PageLib-ManagePages-Summary-copy.png">
+  <img src="images/SCI-PageLib-ManagePages-Summary-copy.png">
 </div>
 
    - Name the new page `PG&S-Summary` (add a description if desired)
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-1.png">
+  <img src="images/SCI-Scope3-pgs-1.png">
 </div>
 
    - Click on `Create`
@@ -133,17 +133,17 @@ Step 4.2. **Configure the PG&S-Summary Page**
    
    - Click `Configure` on the new `PG&S-Summary` page
   <div align="center">
-  <img src="Images/SCI-Scope3-pgs-config-context.png">
+  <img src="images/SCI-Scope3-pgs-config-context.png">
 </div>
  
    - In the popup, review the context variables (these control the data displayed)
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-context-vars.png">
+  <img src="images/SCI-Scope3-pgs-context-vars.png">
 </div>
    
    - Set `categoryLevelOneFilter` to `PG&S` (ensure this matches your product data exactly)
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-context-vars-catL1.png">
+  <img src="images/SCI-Scope3-pgs-context-vars-catL1.png">
 </div>
    
    - (Optional) Adjust `numberOfMonths` to specify the number of months for reporting data (e.g., 60)
@@ -151,7 +151,7 @@ Step 4.2. **Configure the PG&S-Summary Page**
    - Leave other settings as default unless customization is required. You can validate the account style link values for the PG&S by looking at the same from Envizi account styles extract report following instructions [here](extractAccountStyleLinks.md)
    - Review your settings:
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-context-2.png">
+  <img src="images/SCI-Scope3-pgs-context-2.png">
 </div>
 
    - Click `Save`
@@ -160,7 +160,7 @@ Step 4.3. **View the PG&S Summary page**
 
 On the PG&S Summary page, the context variables look like below 
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-context-3.png">
+  <img src="images/SCI-Scope3-pgs-context-3.png">
 </div> 
 
 Step 4.5. **Access the Custom Report**
@@ -168,7 +168,7 @@ Step 4.5. **Access the Custom Report**
    - Select the `PG&S-Summary` tab
    - Choose a month to view emissions
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-summary.png">
+  <img src="images/SCI-Scope3-pgs-summary.png">
 </div>
 
 ---
@@ -183,24 +183,24 @@ Step 5.1. **Copy the Summary Page**
   - Go to `Builder > Page builder`
   - Click `Manage pages` (top right)
   <div align="center">
-  <img src="Images/SCI-PageLib-ManagePages.png">
+  <img src="images/SCI-PageLib-ManagePages.png">
 </div>
 
   - Select the `Scope 3 Summary` tab
  <div align="center">
-  <img src="Images/SCI-PageLib-ManagePages-Summary-1.png">
+  <img src="images/SCI-PageLib-ManagePages-Summary-1.png">
 </div>
 
   - Click the pencil icon next to `Summary` to preview
  
   - Click `Copy` (top right) to create a new page
   <div align="center">
-  <img src="Images/SCI-PageLib-ManagePages-Summary-copy.png">
+  <img src="images/SCI-PageLib-ManagePages-Summary-copy.png">
 </div>
 
   - Name the new page `CG-Summary` (add a description if desired)
 <div align="center">
-  <img src="Images/SCI-Scope3-cgs-1.png">
+  <img src="images/SCI-Scope3-cgs-1.png">
 </div>
 
   - Click on `Create`
@@ -210,17 +210,17 @@ Step 5.2. **Configure the CG-Summary Page**
    
   - Click `Configure` on the new `CG-Summary` page
   <div align="center">
-  <img src="Images/SCI-Scope3-cgs-3.png">
+  <img src="images/SCI-Scope3-cgs-3.png">
 </div>
  
   - In the popup, review the context variables (these control the data displayed)
 <div align="center">
-  <img src="Images/SCI-Scope3-pgs-context-vars.png">
+  <img src="images/SCI-Scope3-pgs-context-vars.png">
 </div>
    
   - Set `categoryLevelOneFilter` to `CG` (ensure this matches your product data exactly)
 <div align="center">
-  <img src="Images/SCI-Scope3-cgs-4.png">
+  <img src="images/SCI-Scope3-cgs-4.png">
 </div>
    
   - (Optional) Adjust `numberOfMonths` to specify the number of months for reporting data (e.g., 60)
@@ -235,7 +235,7 @@ Step 5.2. **Configure the CG-Summary Page**
 
   - Review your settings:
 <div align="center">
-  <img src="Images/SCI-Scope3-cgs-7-final.png">
+  <img src="images/SCI-Scope3-cgs-7-final.png">
 </div>
 
   - Click `Save`
@@ -244,7 +244,7 @@ Step 5.3. **View the CG-Summary page**
 
 On the CG-Summary page, the context variables look like below 
 <div align="center">
-  <img src="Images/SCI-Scope3-cgs-context.png">
+  <img src="images/SCI-Scope3-cgs-context.png">
 </div> 
 
 Step 5.4. **Access the Custom CG-Summary Report**
@@ -252,5 +252,5 @@ Step 5.4. **Access the Custom CG-Summary Report**
   - Select the `CG-Summary` tab
   - Choose a month to view emissions
 <div align="center">
-  <img src="Images/Scope3-cg-summary.png">
+  <img src="images/Scope3-cg-summary.png">
 </div>

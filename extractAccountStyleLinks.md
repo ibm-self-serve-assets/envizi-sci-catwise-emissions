@@ -8,7 +8,7 @@ There are different ways to find the account style link value for the given acco
 4. Select report `Account Style Field Extract` 
 5. Run the report 
 <div align="center">
-  <img src="Images/Envizi-AccountStyle-extract-1.png">
+  <img src="images/Envizi-AccountStyle-extract-1.png">
 </div> 
 
 6. Download csv to local system
@@ -28,6 +28,6 @@ There are different ways to find the account style link value for the given acco
      - Capital Goods - supplier specific (kg CO2e) (e.g., 38127 )
 
 <div align="center">
-  <img src="Images/Envizi-AccountStyle-extract-2.png">
+  <img src="images/Envizi-AccountStyle-extract-2.png">
 </div>   
 
