@@ -254,3 +254,99 @@ Step 5.4. **Access the Custom CG-Summary Report**
 <div align="center">
   <img src="images/Scope3-cg-summary.png">
 </div>
+
+
+#### Step 6: Export Scope 3 data to Envizi
+
+  - Go to `Reporting  > Scope 3 summary`
+  - Click on PG&S-Summary report
+  - Select a month where the data is available
+<div align="center">
+  <img src="images/SCIS-Scope3-export-pgs-july.png">
+</div>
+
+  - Verify that the job is successfully executed 
+<div align="center">
+  <img src="images/SCIS-Export-PGS-Summary.png">
+</div>
+  
+#### Step 7: View data in Envizi
+  - Login to Envizi 
+  - To verify the file delivered and loaded successfully from SCI, navigate to `Admin > Data Flow Automation > File Delivery Status`
+ <div align="center">
+  <img src="images/Envizi-pGS-fileDelivered.png">
+</div> 
+
+  - Verify that file delivery, processing and loading status are completed and marked green as shown in above screenshot
+  
+  - Verify the content of the file `Select file > Download Original Files` 
+  - Open the file to verify the content
+  
+  <div align="center">
+  <img src="images/Envizi-pgs-file-content.png">
+</div>  
+
+
+   - Observe the 3 records in the file each corresponding to each row in the SCIS export command refer to Step 6.  In this example only spend-data method used for calculating the emissions so far, hence each location has only the emission record corresponding to spend-based method and the same is captured in the Envizi accounts, refer the columns `Location Ref`  and `Account Number ` You can also observe the account number is prefixed with the value `scis-pgs-` which is set in the context variable for `PG&S-Summary` report page in SCIS.
+  
+  <div align="center">
+  <img src="images/Envzi-pgs-file-delivered-validated-scis.png">
+</div> 
+
+
+   - Navigate to `Manage > Accounts` from 
+   - Enter `scis-pgs-` in `Account Number` to list the accounts created through SCIS export. 
+   <div align="center">
+  <img src="images/Envizi-pgs-accounts.png">
+</div>  
+  
+   - Observe the spend-based accounts created against each location.
+   - View `Records` of any account to verify the data exported from SCIS is matches
+   <div align="center">
+  <img src="images/Envizi-pgs-account-records.png">
+</div>  
+
+#### Step 8: Repeat the steps 6 & 7 to export Cat 2 - CapitalGoods data.
+
+   - Export data from `CG Summary` page
+   <div align="center">
+  <img src="images/SCIS-CG-export.png">
+</div>   
+
+   - Verify the Job in SCIS
+<div align="center">
+  <img src="images/SCIS-Export-CG-Summary-job.png">
+</div>  
+  
+   - Verify the file delivered to Envizi
+<div align="center">
+  <img src="images/Envizi-CG-fileDelivered.png">
+</div>  
+
+  - Check the accounts created for C&G category emissions
+<div align="center">
+  <img src="images/Envizi-cg-accounts.png">
+</div>  
+
+- View records to verify the values matches
+  
+
+**Final Observation:**
+
+To verify the results, navigate to any location in Envizi and view the accounts for each Scope 3 category, broken down by GHG method. For example:
+
+`INBank-APAC-Ops > Accounts`
+
+<div align="center">
+  <img src="images/Envizi-location-all-accounts-final.png">
+</div> 
+
+
+
+---
+
+## Summary
+
+This guide demonstrated how to leverage SCI advanced configurations to create custom reports for separately reporting emissions for Scope 3 Category 1 (Purchased Goods & Services) and Category 2 (Capital Goods). We also covered the end-to-end data flow between SCI and Envizi, showing how consolidated and category-level data is reported in Envizi for each GHG method.
+
+By defining and applying a Category L1 filter, this approach can be extended to report emissions separately for any other Scope 3 category, such as Category 11 (Use of Sold Goods), providing flexibility to meet diverse reporting requirements.

@@ -1,0 +1,4 @@
+Organization link,Organization,Location,Location Ref,Account Style Link,Account Style Caption,Account Subtype,Account Number,Account Reference,Account Supplier,Account Reader,Record Start YYYY-MM-DD,Record End YYYY-MM-DD,Record Data Quality,Record Billing Type,Record Subtype,Record Entry Method,Record Reference,Record Invoice Number,Emissions (kg CO2e),Supplier Cost,Supplier Cost Currency Code
+17000104,IBM APAC,,INBank-APAC-Ops,20207,,,scis-pgs-Spend-based_INBank-APAC-Ops,,,,2024-07-01,2024-07-31,,,,,,,413208.9338,22,USD
+17000104,IBM APAC,,INBank-EMEA-Ops,20207,,,scis-pgs-Spend-based_INBank-EMEA-Ops,,,,2024-07-01,2024-07-31,,,,,,,255347.2079,37,USD
+17000104,IBM APAC,,INBank-US-Ops,20207,,,scis-pgs-Spend-based_INBank-US-Ops,,,,2024-07-01,2024-07-31,,,,,,,121637.8881,17,USD
